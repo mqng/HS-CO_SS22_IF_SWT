@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+        <servlet>
+        <servlet-name>Initialisierungstart</servlet-name>
+        <jsp-file>/initialisierungstart.jsp</jsp-file>
+
+    </servlet>
+    
+    <servlet>
+        <servlet-name>Initialisierungliste1</servlet-name>
+        <jsp-file>/initialisierungliste1.jsp</jsp-file>
+        <init-param>
+            <param-name>datei</param-name>
+            <param-value>D1.txt</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>Initialisierungliste2</servlet-name>
+        <jsp-file>/initialisierungliste2.jsp</jsp-file>
+        <init-param>
+            <param-name>datei</param-name>
+            <param-value>D2.txt</param-value>
+        </init-param>
+    </servlet>
+    
+      <context-param>
+        <param-name>reldir</param-name>
+        <param-value>reldir/</param-value>
+    </context-param>
+    <servlet-mapping>
+        <servlet-name>Initialisierungstart</servlet-name>
+        <url-pattern>/initialisierungstart.jsp</url-pattern>
+        
+        
+    </servlet-mapping> 
+    <servlet-mapping><servlet-name>Initialisierungliste1</servlet-name>
+        <url-pattern>/initialisierungliste1.jsp</url-pattern></servlet-mapping>
+        <servlet-mapping><servlet-name>Initialisierungliste2</servlet-name>
+        <url-pattern>/initialisierungliste2.jsp</url-pattern></servlet-mapping>
+</web-app>
